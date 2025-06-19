@@ -1,0 +1,95 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+  animation: fadeIn 0.4s ease;
+}
+
+h2 {
+  margin-top: 0;
+  color: #4a00e0;
+  font-size: 1.4rem;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+button {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(to right, #2575fc, #6a11cb);
+}
+
+button.outline {
+  background: white;
+  color: #2575fc;
+  border: 2px solid #2575fc;
+}
+
+.status-area {
+  margin-top: 12px;
+  font-size: 15px;
+}
+
+.status-box {
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.success { color: green; }
+.error { color: red; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+th, td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+th {
+  color: #444;
+  font-weight: 600;
+  width: 40%;
+}

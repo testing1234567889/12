@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VIP AnimeKita</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Firebase UMD -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyB5qZ9-sGdXM-BgmTm_yh9ofFpVNu82k5I",
+      authDomain: "animekitavip.firebaseapp.com",
+      databaseURL: "https://animekitavip-default-rtdb.firebaseio.com",
+      projectId: "animekitavip",
+      storageBucket: "animekitavip.firebasestorage.app",
+      messagingSenderId: "216281588315",
+      appId: "1:216281588315:web:65ee4c858baae61135557e"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+</head>
+<body onload="aturTampilanAwal()">
+  <div class="container">
+    <!-- Login Nama -->
+    <div class="card" id="loginBox">
+      <h2>🔑 Login VIP</h2>
+      <input type="text" id="namaInput" placeholder="Masukkan nama kamu" />
+      <button onclick="cekTokenNama()">Login Nama</button>
+      <div id="hasilLogin" class="status-area"></div>
+    </div>
+
+    <!-- Aktivasi VIP -->
+    <div class="card" id="aktivasiBox" style="display: none;">
+      <h2>🚀 Aktivasi VIP</h2>
+      <input type="email" id="emailAktivasi" placeholder="Email akun AnimeKita kamu" />
+      <select id="durasi">
+        <option value="Mzk3MjA4NDM3NjFfM18x">1 Bulan VIP</option>
+        <option value="Mzk3MjA4NDM3NjFfM18z">3 Bulan VIP</option>
+        <option value="Mzk3MjA4NDM3NjFfM18xMg%3D%3D">1 Tahun VIP</option>
+      </select>
+      <button onclick="prosesVip()">Aktifkan VIP</button>
+      <button onclick="logoutVIP()" class="outline">Keluar</button>
+      <div id="hasilAktivasi" class="status-area"></div>
+    </div>
+
+<div class="card">
+  <h2>📩 Cek Status VIP AKUN (via Email)</h2>
+  <input type="email" id="cekEmail" placeholder="Masukkan email " />
+  <button onclick="cekStatusViaEmail()">Cek Status</button>
+  <div id="hasilStatusEmail" class="status-area"></div>
+</div>
+
+
+    <!-- Status VIP -->
+    <div class="card" id="statusBox" style="display: none;">
+      <h2>🔍 Status VIP</h2>
+      <button onclick="cekStatus()">Cek Status</button>
+      <div id="hasilStatus" class="status-area"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
